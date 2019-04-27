@@ -54,7 +54,8 @@ public class SortedRotatedArrayFind {
     }
 
     public static void main(String[] args){
-        int[] arr = {6,7,8,9,10,11,12,13,14,15,1,2,3,4,5};
+       // int[] arr = {6,7,8,9,10,11,12,13,14,15,1,2,3,4,5};
+        int[] arr ={15, 18, 2, 3, 6, 12};
         SortedRotatedArrayFind sortedRotatedArrayFind = new SortedRotatedArrayFind();
         int index = sortedRotatedArrayFind.findElement(arr,15);
         System.out.println("Index: "+ index);
