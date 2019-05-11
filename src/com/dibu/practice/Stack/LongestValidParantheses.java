@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class LongestValidParantheses {
 
-    public int longestValidParentheses(String s) {
+    public static int longestValidParentheses(String s) {
         if(s.length() <=1){
             return 0;
         }
@@ -18,13 +18,18 @@ public class LongestValidParantheses {
                 st.pop();
                 if(st.empty()){
                     st.push(i);
-                }
-                int l = i - st.peek();
-                if(l > maxLen){
-                    maxLen = l;
+                }else {
+                    int l = i - st.peek();
+                    if (l > maxLen) {
+                        maxLen = l;
+                    }
                 }
             }
         }
         return maxLen;
+    }
+    public static void main(String[] args){
+        String s= "(((((";
+        System.out.println(longestValidParentheses(s));
     }
 }
